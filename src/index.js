@@ -6,7 +6,16 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <nav>
+      <h1>Sigma</h1>
+      <ul>
+        <li><a href="#formPage">Add</a></li>
+      </ul>
+    </nav>
     <App />
+    <footer>
+      <h4>Sigma Student Mark Management System | Developed by Devakrishnan</h4>
+    </footer>
   </React.StrictMode>
 );
 

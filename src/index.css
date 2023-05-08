@@ -1,36 +1,74 @@
+:root {
+  --color1: #247CFF;
+  --color2: #212529;
+  --color3: #dfdede;
+  --bg1: #FCFCFC;
+  --bg2: #f8fafc;
+  --text: #747275;
+  --color4: #6494edce;
+  --footer: #eeecec;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style-type: none;
+  text-decoration: none;
 }
 
-.title {
-  color: crimson;
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.details {
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg2);
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 20px;
 }
 
-.details h3 {
-  color: #272727;
-  font-weight: lighter;
-  letter-spacing: 0.5px;
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: var(--color1);
+  color: var(--bg2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  padding-right: 70px;
+  position: fixed;
+  top: 0;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.details h3 span {
-  color: crimson;
-  font-weight: bold;
-  margin-right: 20px;
+nav ul {
+  display: flex;
+  gap: 15px;
+  height: 100%;
+  line-height: 50px;
 }
+
+nav ul li a {
+  color: #fcfcfc;
+}
+
 
 table {
   width: 45%;
   margin: 20px auto;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 table,
@@ -47,10 +85,10 @@ table tr td {
 }
 
 table thead {
-  background-color: crimson;
+  background-color: var(--color1);
 }
 
-table thead tr th {
+table thead tr td {
   color: #fcfcfc;
 }
 
@@ -59,7 +97,7 @@ table tbody tr td {
 }
 
 table tbody tr:nth-child(even) {
-  background-color: #626161;
+  background-color: var(--text);
 }
 
 table tbody tr:nth-child(odd) {
@@ -70,18 +108,82 @@ table tbody tr:nth-child(odd) td {
   color: #000000;
 }
 
-table tfoot tr {
-  background-color: #eee;
+table tbody tr td button {
+  color: var(--color1);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-table tfoot tr td:nth-child(1) {
-  text-align: right;
-  padding-right: 16%;
-  font-weight: bold;
-  color: crimson;
+
+/* Form */
+.title {
+  font-size: 28px;
+  color: var(--color1);
+  margin-bottom: 20px;
 }
 
-table tfoot tr td:nth-child(2) {
-  color: crimson;
-  font-weight: bold;
+.form_page form {
+  width: 35%;
+  height: auto;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.form_page form .form_group {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.form_page form .form_group input[type="text"] {
+  width: 60%;
+  border: none;
+  outline: none;
+  padding: 2px 10px;
+  font-size: 14px;
+  background-color: transparent;
+  border-bottom: 2px solid var(--color3);
+}
+
+.form_page form input[type="submit"] {
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: var(--color1);
+  color: var(--bg2);
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.form_page form .viewTable {
+  color: var(--text);
+}
+
+.form_page form .viewTable a {
+  color: var(--color1);
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  display: grid;
+  place-items: center;
+  background-color: var(--color1);
+  padding: 25px 0px;
+}
+
+footer h4 {
+  color: var(--bg2);
 }
